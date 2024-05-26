@@ -2,6 +2,11 @@
 
 FileCrypt is a Python-based file encryption and decryption tool. It uses the AES-256 encryption standard with a 96-bit IV for GCM. The tool is capable of encrypting and decrypting both individual files and entire directories.
 
+
+**Warning:**
+
+This program is still underdevelopment
+
 ## Features
 
 - File and directory encryption and decryption
