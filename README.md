@@ -53,9 +53,13 @@ filecrypt.py -d -f/d -del "pathToEncryptedFolder or Files" "path to key file" "o
 
 - `-e`: Encrypt
 - `-d`: Decrypt
+
 - `-f`: File
+- '-d': Directory
+ 
 - `-h`: Hide file extension in encrypted file (e.g., myFile.txt -> myFile.enc)
 - `-k`: Keep file extension in encrypted file (e.g., myFile.txt -> myFile~.txt)
+
 - `-del`: Delete regular files after encryption (optional)
 
 
