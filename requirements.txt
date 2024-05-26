@@ -1,0 +1,4 @@
+cffi==1.16.0
+colorama==0.4.6
+cryptography==42.0.7
+pycparser==2.22
