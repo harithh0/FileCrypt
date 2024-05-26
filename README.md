@@ -3,10 +3,6 @@
 FileCrypt is a Python-based file encryption and decryption tool. It uses the AES-256 encryption standard with a 96-bit IV for GCM. The tool is capable of encrypting and decrypting both individual files and entire directories.
 
 
-**Warning:**
-
-This program is still underdevelopment
-
 ## Features
 
 - File and directory encryption and decryption
@@ -33,33 +29,27 @@ pip install cryptography
 
 ### Encryption
 
-For file encryption:
+To encrypt a file or directory, use the following command:
 
 ```bash
-python filecrypt.py -e -f -h/k -del "LocationOfFileToEncrypt" "LocationToSaveEncryptedFile"
-```
-
-For directory encryption:
-
+filecrypt.py -e [2] [3] [4](optional) "FILE/FOLDER TO ENCRYPT" "PATH TO SAVE ENCRYPTED FILES AND KEY"(optional)
+````
+**Example:**
 ```bash
-python filecrypt.py -e -d -h/k -del "LocationOfDirectoryToEncrypt" "LocationToSaveEncryptedFiles"
+filecrypt.py -e -f/d -h/k -del "LocationOfFileToEncrypt" "optional folder to save encrypted file and key"
 ```
 
 ### Decryption
-
-For file decryption:
-
+To decrypt a file or directory, use the following command:
 ```bash
-python filecrypt.py -d -f -del "LocationOfEncryptedFile" "LocationOfKey"
+filecrypt.py -d [2] [3](optional) "PATH OF ENCRYPTED FOLDER" "PATH OF KEY" "PATH TO SAVE DECRYPTED FILES"(optional)
+```
+**Example:**
+```bash
+filecrypt.py -d -f/d -del "pathToEncryptedFolder or Files" "path to key file" "optional folder to store decrypted files"
 ```
 
-For directory decryption:
-
-```bash
-python filecrypt.py -d -d -del "LocationOfEncryptedDirectory" "LocationOfKey"
-```
-
-## Options
+### Options
 
 - `-e`: Encrypt
 - `-d`: Decrypt
@@ -68,10 +58,9 @@ python filecrypt.py -d -d -del "LocationOfEncryptedDirectory" "LocationOfKey"
 - `-k`: Keep file extension in encrypted file (e.g., myFile.txt -> myFile~.txt)
 - `-del`: Delete regular files after encryption (optional)
 
-## Note
-
-The tool uses Python's garbage collection to attempt to clear memory after use, but this is not a guarantee that the memory is cleared immediately or that it's cleared in a secure manner. It's generally better to use libraries and constructs that are designed for secure handling of sensitive data.
 
 ## Disclaimer
 
 This tool is for educational purposes only. The author is not responsible for any misuse or damage caused by this tool. Use it responsibly.
+
+

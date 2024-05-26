@@ -32,38 +32,37 @@ def programHelp(problem=None):
     else:
         print("""
     USAGE:
-            filecrypt.py [1] [2] [3] [4] "TARGET" [5]
-
-    COMMANDS:
-            -e  Encrypt
-            -d  Decrypt
-    
-    FORMAT example: 
-              For Encryption:
-                demo -e -f/d -h/k "LocationOfFileToEncrypt/FolderToEncrypt" "LocationToSaveEncryptedFile"(optional)
-              
-              
-              
-              For Decryption:
-                demo -d -f/d "LocationOfEncryptedFile/FolderToDecrypt" "LocationOfKey"
-              
-
-              
-    OPTIONS:
-            [1]
-              -e = Encrypt
-              -d = Decrypt
-              
+        Encryption:
+            filecrypt.py -e [2] [3] [4](optional) "FILE/FOLDER TO ENCRYPT" "PATH TO SAVE ENCRYPTED FILES AND KEY"(optional)
+        
             [2]
               -f = File
               -d = Directory
               
-            [3] Encryption only
+            [3]
               -h = Hide file extension in encrypted file, eg. myFile.txt -> myFile.enc
               -k = keep file extension in encrypted file, eg. myFile.txt -> myFile~.txt
+              
+            [4] 
+                -del = Delete normal files after encryption (optional)
             
-            [4]
-              -del = Delete regular files after encryption (optional)
+            example:
+            filecrypt.py -e -f/d -h/k "LocationOfFileToEncrypt or FolderToEncrypt" "optional folder to save encrypted file and key"
+                
+        
+        Decryption:
+            filecrypt.py -d [2] [3](optional) "PATH OF ENCRYPTED FOLDER" "PATH OF KEY" "PATH TO SAVE DECRYPTED FILES"(optional)
+            
+            filecrypt.py -d -f/d "pathToEncryptedFolder or Files" "pathToKeyFile" "optional folder to store decrypted files"
+            
+            [2]
+              -f = File
+              -d = Directory
+              
+            [3]
+                -del = Delete encrypted files and key after decryption (optional)
+        
+            
         """)
     exit()
 
