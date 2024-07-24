@@ -1,5 +1,6 @@
 # FileCrypt
 
+```
 |  ____( ) |     / ____|                | |  
 | |__   _| | ___| |     _ __ _   _ _ __ | |_ 
 |  __| | | |/ _ \ |    | '__| | | | '_ \| __|
@@ -7,7 +8,7 @@
 |_|    |_|_|\___|\_____|_|   \__, | .__/ \__|
                               __/ | |        
                              |___/|_|   
-
+```
 
 FileCrypt is a Python-based file encryption and decryption tool. It uses the AES-256 encryption standard with a 96-bit IV for GCM. The tool is capable of encrypting and decrypting both individual files and entire directories.
 
