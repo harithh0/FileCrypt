@@ -23,7 +23,7 @@ FileCrypt is a Python-based file encryption and decryption tool. It uses the AES
 2. Install the required Python libraries using pip:
 
 ```bash
-pip install cryptography
+pip install -r requirements.txt
 ```
 
 ## Usage
